@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 10 - Web Dev Frameworks</title>
+    <link rel="stylesheet" href="lab10c_styles.css" />
+</head>
+<body>
+    <h1>Lab 10 - Web Dev Frameworks</h1>
+    <main class="container">
+    <section>
+        <p id="intro">This website is powered by 
+            <a href="https://vuejs.org/" target="_blank">Vue.js</a>, 
+        a JavaScript framework.<p>
+        <img src="https://vuejs.org/images/logo.png">
+    </section>
+    <section>
+        <h2>Setting up this Website</h2>
+        <p>
+            I set up this Vue.js website, following these steps:
+            <ol>
+                <li>Create an HTML file and include the necessary structure.</li>
+                <li>Create a CSS file for styling and link it in the HTML file.</li>
+                <li>Include the Vue.js library in the HTML file using a
+                    <a href="https://unpkg.com/vue@3/dist/vue.global.js" target="_blank">CDN</a>
+                invocation.</li>
+                <li>Create a JavaScript file for the Vue.js application logic.</li>
+                <li>Write my Vue.js code inside the setup function.</li>
+                <li>Mount the Vue app to the specified element (in my case, #app).</li>
+            </ol>
+        </p>
+    </section>
+    <section>
+        <h2>Difficulties with Vue.js</h2>
+        <p>
+            One of the difficulties I faced was how to correctly set up a Vue.js project with the proper file
+            structure, especially when it came to integrating the app.js script which housed the Vue app. 
+            Intially, I was unsure what the logic would be more suited for
+            the html file or the app.js file. However, reading the 
+                <a href="https://vuejs.org/guide/introduction.html" target="_blank">documentation</a>
+            proved to be a valuable resource in clarifying this confusion. The html file
+            is more concerned with structural layout and static content. On the other hand,
+            the app.js logic deals with dynamic content and updates to the DOM. I was able to gather this
+            from the high-level introduction in the docs.
+        </p>
+    </section>
+    <section id="app">
+        <h2>Click the button!</h2>
+        <button @click="count++">
+            Times clicked: {{ count }}
+        </button>
+    </section>
+</main>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="lab10c_app.js"></script>
+</body>
+</html>
